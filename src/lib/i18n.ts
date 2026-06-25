@@ -34,7 +34,7 @@ export const translations = {
     consortium: {
       tag: 'Консорциум',
       title: 'БРИКС Технологии',
-      subtitle: 'Совместно с Фондом «Сколково». Цель — «Чистый и безопасный мир».',
+      subtitle: 'Цель — «Чистый и безопасный мир».',
       stackLabel: 'Технологический стек 5C',
       stacks: [
         { icon: 'Sprout', title: 'Clean Agriculture', text: 'Умное и устойчивое сельское хозяйство' },
@@ -179,7 +179,7 @@ export const translations = {
     consortium: {
       tag: 'Consortium',
       title: 'BRICS Technologies',
-      subtitle: 'In partnership with Skolkovo Foundation. Goal — "A Clean and Safe World".',
+      subtitle: 'Goal — "A Clean and Safe World".',
       stackLabel: 'Technology stack 5C',
       stacks: [
         { icon: 'Sprout', title: 'Clean Agriculture', text: 'Smart and sustainable agriculture' },
