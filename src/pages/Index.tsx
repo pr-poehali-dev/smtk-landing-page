@@ -70,10 +70,7 @@ const Index = () => {
       <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
         <div className="container flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2.5">
-            <div className="relative h-9 w-9 grid place-items-center rounded-md bg-primary text-primary-foreground font-heading font-black text-sm">
-              <Icon name="Hexagon" size={36} className="absolute text-primary/30" />
-              <span className="relative">СТ</span>
-            </div>
+            <img src="https://cdn.poehali.dev/projects/af89fdd8-134e-4949-be83-c19d3ceebfbf/bucket/27911c99-cf41-4cee-9f2b-dd1b204cf610.png" alt="СМТК" className="h-9 w-9 object-contain" />
             <span className="font-heading font-extrabold tracking-tight text-lg">СМТК</span>
           </a>
 
@@ -351,7 +348,7 @@ const Index = () => {
       <footer className="border-t border-border/60 py-10">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2.5">
-            <div className="h-7 w-7 grid place-items-center rounded bg-primary text-primary-foreground font-heading font-black text-xs">СТ</div>
+            <img src="https://cdn.poehali.dev/projects/af89fdd8-134e-4949-be83-c19d3ceebfbf/bucket/27911c99-cf41-4cee-9f2b-dd1b204cf610.png" alt="СМТК" className="h-7 w-7 object-contain" />
             <span>{t.footer.address}</span>
           </div>
           <div className="flex items-center gap-6">
