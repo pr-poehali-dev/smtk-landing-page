@@ -1,4 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://s-mtk.ru/sitemap.xml
+
 User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
 Allow: /
 
 User-agent: Bingbot
@@ -8,7 +17,4 @@ User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
 Allow: /
