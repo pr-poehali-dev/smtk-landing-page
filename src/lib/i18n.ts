@@ -126,7 +126,7 @@ export const translations = {
       title: 'Запросите вступление',
       subtitle: 'Оставьте заявку — мы свяжемся с вами и направим пакет MoU+NDA.',
       people: [
-        { name: 'Сергей Вихарев', role: 'Президент СМТК', phone: '+7 (915) 948-92-32', email: 'sviharev@s-mtk.ru' },
+        { name: 'Сергей Вихарев', role: 'Президент СМТК', phone: '+7 (915) 948-92-32', email: 'mail@s-mtk.ru' },
       ],
       form: {
         name: 'Имя',
