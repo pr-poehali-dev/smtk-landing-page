@@ -99,7 +99,7 @@ export const translations = {
         },
         {
           stack: 'Clean Space',
-          name: 'RFM',
+          name: 'РТЛА',
           text: '«Технокупол / Технотоннель» — инфраструктура безопасных автономных дронов.',
           status: 'R&D',
           partners: 'Технологические интеграторы',
