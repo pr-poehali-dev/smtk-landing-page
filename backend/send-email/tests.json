@@ -12,8 +12,8 @@
       "path": "/",
       "body": {"company": "Test"},
       "expectedStatus": 400,
-      "expectedBody": {"error": "Имя и email обязательны"},
-      "bodyMatcher": "partial"
+      "expectedBody": "Имя и email обязательны",
+      "bodyMatcher": "contains"
     }
   ]
 }

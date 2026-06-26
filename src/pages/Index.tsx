@@ -9,9 +9,12 @@ import { translations, type Lang } from '@/lib/i18n';
 
 const HERO_IMG = 'https://cdn.poehali.dev/projects/af89fdd8-134e-4949-be83-c19d3ceebfbf/files/9e699215-5144-4690-bf2d-a425d00d2b7c.jpg';
 
+const SEND_EMAIL_URL = 'https://functions.poehali.dev/0b1be5f4-c584-4178-80bd-7a10a30c975b';
+
 const Index = () => {
   const [lang, setLang] = useState<Lang>('ru');
   const [consent, setConsent] = useState(false);
+  const [sending, setSending] = useState(false);
   const t = translations[lang];
   const { toast } = useToast();
 
@@ -24,9 +27,34 @@ const Index = () => {
     { key: 'contacts', href: '#contacts' },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({ title: t.contacts.form.success });
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    setSending(true);
+    try {
+      const res = await fetch(SEND_EMAIL_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          company: data.get('company'),
+          email: data.get('email'),
+          message: data.get('message'),
+        }),
+      });
+      if (res.ok) {
+        toast({ title: t.contacts.form.success });
+        form.reset();
+        setConsent(false);
+      } else {
+        toast({ title: 'Ошибка отправки. Попробуйте позже.', variant: 'destructive' });
+      }
+    } catch {
+      toast({ title: 'Ошибка отправки. Попробуйте позже.', variant: 'destructive' });
+    } finally {
+      setSending(false);
+    }
   };
 
   const Tag = ({ children }: { children: string }) => (
@@ -302,18 +330,18 @@ const Index = () => {
 
           <form onSubmit={handleSubmit} className="rounded-2xl border border-border bg-card p-7 md:p-9">
             <div className="grid sm:grid-cols-2 gap-4 mb-4">
-              <Input required placeholder={t.contacts.form.name} className="bg-background border-border" />
-              <Input required placeholder={t.contacts.form.company} className="bg-background border-border" />
-              <Input required type="email" placeholder={t.contacts.form.email} className="bg-background border-border" />
-              <Input required type="tel" placeholder={t.contacts.form.phone} className="bg-background border-border" />
+              <Input name="name" required placeholder={t.contacts.form.name} className="bg-background border-border" />
+              <Input name="company" placeholder={t.contacts.form.company} className="bg-background border-border" />
+              <Input name="email" required type="email" placeholder={t.contacts.form.email} className="bg-background border-border" />
+              <Input name="phone" type="tel" placeholder={t.contacts.form.phone} className="bg-background border-border" />
             </div>
-            <Textarea placeholder={t.contacts.form.message} rows={4} className="bg-background border-border mb-5" />
+            <Textarea name="message" placeholder={t.contacts.form.message} rows={4} className="bg-background border-border mb-5" />
             <label className="flex items-start gap-3 mb-6 cursor-pointer">
               <Checkbox checked={consent} onCheckedChange={(v) => setConsent(Boolean(v))} className="mt-0.5" />
               <span className="text-sm text-muted-foreground">{t.contacts.form.consent}</span>
             </label>
-            <Button type="submit" size="lg" disabled={!consent} className="w-full font-heading font-semibold">
-              {t.contacts.form.submit}
+            <Button type="submit" size="lg" disabled={!consent || sending} className="w-full font-heading font-semibold">
+              {sending ? 'Отправка...' : t.contacts.form.submit}
             </Button>
           </form>
         </div>
