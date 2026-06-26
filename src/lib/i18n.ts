@@ -41,7 +41,7 @@ export const translations = {
         { icon: 'Zap', title: 'Clean Energy', text: 'Эффективная и безопасная энергетика' },
         { icon: 'Droplets', title: 'Clean Water', text: 'Чистая вода и водоподготовка' },
         { icon: 'Waves', title: 'Clean Ocean', text: 'Мониторинг и очистка океана' },
-        { icon: 'Rocket', title: 'Clean Space', text: 'Безопасное освоение пространства' },
+        { icon: 'PlaneTakeoff', title: 'Clean Space', text: 'Безопасное освоение пространства' },
       ],
     },
     values: {
