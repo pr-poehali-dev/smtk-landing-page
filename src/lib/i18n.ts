@@ -85,7 +85,7 @@ export const translations = {
           stack: 'Clean Ocean',
           name: 'CleanOceanTech',
           text: 'Подводные дроны: мониторинг и очистка акваторий и морских судов от посторонних предметов.',
-          status: 'Прототип',
+          status: 'Готовность к СП',
           partners: 'Экологические фонды',
           markets: 'Прибрежные государства',
         },
