@@ -157,7 +157,7 @@ export const translations = {
     },
     footer: {
       address: 'Ассоциация разработчиков высоких технологий «Союз международной технологической кооперации» · 119331, г. Москва, пр-кт Вернадского, д. 29, помещ. 4/12 · ИНН 7736375788 · ОГРН 1267700093055',
-      rights: '© 2026 UITC. Все права защищены.',
+      rights: '© 2026 СМТК. Все права защищены.',
       privacy: 'Политика конфиденциальности',
     },
   },
@@ -317,7 +317,7 @@ export const translations = {
     },
     footer: {
       address: 'Legal address: Moscow, Russian Federation',
-      rights: '© 2026 SMTK. All rights reserved.',
+      rights: '© 2026 UITC. All rights reserved.',
       privacy: 'Privacy Policy',
     },
   },

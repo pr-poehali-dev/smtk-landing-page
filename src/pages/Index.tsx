@@ -71,7 +71,7 @@ const Index = () => {
         <div className="container flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2.5">
             <img src="https://cdn.poehali.dev/projects/af89fdd8-134e-4949-be83-c19d3ceebfbf/bucket/27911c99-cf41-4cee-9f2b-dd1b204cf610.png" alt="СМТК" className="h-9 w-9 object-contain" />
-            <span className="font-heading font-extrabold tracking-tight text-lg">UITC</span>
+            <span className="font-heading font-extrabold tracking-tight text-lg">{lang === 'ru' ? 'СМТК' : 'UITC'}</span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-7">
