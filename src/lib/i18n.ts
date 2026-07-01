@@ -131,8 +131,8 @@ export const translations = {
       title: 'Дорожная карта членства',
       subtitle: 'Четыре прозрачных шага от знакомства до совместного предприятия.',
       steps: [
-        { icon: 'FileSignature', title: 'Sign MoU+NDA', text: 'Подписание меморандума и соглашения о конфиденциальности' },
         { icon: 'Presentation', title: 'Kick-off Meeting', text: 'Стартовая рабочая встреча и определение целей' },
+        { icon: 'FileSignature', title: 'Sign MoU+NDA', text: 'Подписание меморандума и соглашения о конфиденциальности' },
         { icon: 'Search', title: 'Due Diligence', text: 'Взаимная проверка и оценка потенциала' },
         { icon: 'Building', title: 'Joint Venture', text: 'Создание совместного предприятия' },
       ],
@@ -291,8 +291,8 @@ export const translations = {
       title: 'Membership Roadmap',
       subtitle: 'Four transparent steps from introduction to a joint venture.',
       steps: [
-        { icon: 'FileSignature', title: 'Sign MoU+NDA', text: 'Memorandum and confidentiality agreement' },
         { icon: 'Presentation', title: 'Kick-off Meeting', text: 'Initial working meeting and goal-setting' },
+        { icon: 'FileSignature', title: 'Sign MoU+NDA', text: 'Memorandum and confidentiality agreement' },
         { icon: 'Search', title: 'Due Diligence', text: 'Mutual review and potential assessment' },
         { icon: 'Building', title: 'Joint Venture', text: 'Establishing a joint venture' },
       ],
